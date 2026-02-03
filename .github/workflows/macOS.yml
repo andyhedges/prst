@@ -109,7 +109,7 @@ jobs:
 
       - name: setup MacOSX10.15 SDK
         run: |
-          wget https://github.com/phracker/MacOSX-SDKs/releases/download/11.3/MacOSX10.15.sdk.tar.xz
+          wget -nv https://github.com/phracker/MacOSX-SDKs/releases/download/11.3/MacOSX10.15.sdk.tar.xz
           xz -c -d MacOSX10.15.sdk.tar.xz | tar -xf -
           sudo mv MacOSX10.15.sdk "$SDKROOT"
           sudo /usr/libexec/PlistBuddy -c "Set :MinimumSDKVersion 10.15" /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Info.plist
